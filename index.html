@@ -1,0 +1,70 @@
+,<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>E assim disse LUIZ.</title>
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="wrapper-main">
+            <div class="lo-content">
+                <cite class="la-frase">&nbsp;</cite>
+                <p class="lo-filoso">- Luiz Gois</p>
+            </div>
+            <img class="lo-chico" alt='lo-chico' src="filosofo.png" />
+        </div>
+        <script type='text/javascript'>
+            var frases = [
+                'Leva sua máquina pra aws!',
+                'Fui o destaque por fazer meu trabalho!',
+                'Não gostou? Abre PR!',
+                'Depois que atrasar, não adianta reclamar!',
+                'Abriu chamado?',
+                'Tal tudo.',
+                'Porra Bahia! De novo!',
+                'Cala a boca aí carai.',
+                'Abri 10 PR, já revisei os 10 e fechei.',
+                'Ow, consegue ver? Estou chegando em casa!',
+                'Vou te ajudar, mas não me dá um /valeu.',
+                'Se me der um /valeu, não te ajudo nunca mais!',
+                'Eu vi, entendi e está errado!',
+                'Faz o que eu to falando e não reclama!',
+                'Vou deixar minha máquina aberta, quero ver quem vai mexer!',
+                'Não teve deploy... Quando faço aviso no canal!',
+                'Vai e manda PR, carai, vai ficar jogando essa porra de Pokemón GO?',
+                ':sergio2:    Ow, cadê o :bahia: ? \r\n:luiz:    No meu bolso não tá.',
+                'Você tem acesso na AWS? Não? Então tá, flw.',
+                'Procura ai no Google então: tan nananan tan nanan... tan nananan tan nanan...',
+                ':sergio2:    Ow, deixa eu te perguntar uma coisa...\r\n:luiz:    Pergunta pro Google.',
+                'Já te ajudei, agora some da minha frente!', 
+                'Em uma tarde você mandou dois PRs, em uma manhã eu fiz 4 deploys em produção',
+                'Não dá.',
+                ':arn:: E ae Luiz, tudo certo ? \r\n:luiz:: Não sei. Você que veio pra minha mesa perguntar...',
+                'Se precisar, eu faço deploy até do celular',
+                'Já deu de `/vlw`, bora trabalhar'
+            ]
+
+            shuffle = function(a) {
+                var j, x, i;
+                for (i = a.length; i; i--) {
+                    j = Math.floor(Math.random() * i);
+                    x = a[i - 1];
+                    a[i - 1] = a[j];
+                    a[j] = x;
+                }
+            }
+
+            change = function() {
+                shuffle(frases)
+                la_frase = document.getElementsByClassName('la-frase')[0]
+                la_frase.innerHTML = '&ldquo;&nbsp;' + frases[0] + '&nbsp;&rdquo;'
+            }
+
+            change()
+
+            setInterval(change, 10000);
+        </script>
+    </body>
+</html>
